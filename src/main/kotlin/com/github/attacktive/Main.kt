@@ -5,7 +5,7 @@ import com.github.diogoduailibe.lzstring4j.LZString
 import java.nio.charset.StandardCharsets
 
 fun main(vararg args: String) {
-	val defaultFileName = "file2.rpgsave"
+	val defaultFileName = "file1.rpgsave"
 	val argument = args.getOrNull(0)
 	val fileName = if (argument.isNullOrBlank()) { defaultFileName } else { argument }
 
