@@ -7,7 +7,11 @@ import java.nio.charset.StandardCharsets
 fun main(vararg args: String) {
 	val defaultFileName = "file1.rpgsave"
 	val argument = args.getOrNull(0)
-	val fileName = if (argument.isNullOrBlank()) { defaultFileName } else { argument }
+	val fileName = if (argument.isNullOrBlank()) {
+		defaultFileName
+	} else {
+		argument
+	}
 
 	val bytes = FileUtils.readFileFromResources("/${fileName}")
 	val base64 = String(bytes, StandardCharsets.UTF_8)
